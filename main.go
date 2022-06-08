@@ -1,13 +1,14 @@
 package main
 
 import (
-	binarySearch "algorithms-go/binarySearch"
+	"algorithms-go/binarySearch"
 	"fmt"
 )
 
 func main() {
-	nums := []int{1,2,3,4,5}
-	result := binarySearch.FindPeakElement(nums)
+	matrix := [][]int { {1} }
+
+	result := binarySearch.SearchMatrix(matrix, 1)
 
 	fmt.Println(result)
 }
