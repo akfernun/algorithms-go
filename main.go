@@ -1,14 +1,14 @@
 package main
 
 import (
-	"algorithms-go/binarySearch"
+	"algorithms-go/quickSelect"
 	"fmt"
 )
 
 func main() {
-	matrix := [][]int { {1} }
-
-	result := binarySearch.SearchMatrix(matrix, 1)
+	points := [][]int{{1, 3}, {-2, 2}}
+	k := 1
+	result := quickSelect.KClosest(points, k)
 
 	fmt.Println(result)
 }
