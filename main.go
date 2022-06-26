@@ -1,14 +1,12 @@
 package main
 
 import (
-	"algorithms-go/quickSelect"
+	"algorithms-go/dynamicProgramming"
 	"fmt"
 )
 
 func main() {
-	points := [][]int{{1, 3}, {-2, 2}}
-	k := 1
-	result := quickSelect.KClosest(points, k)
+	results := dynamicProgramming.Partition("ababbbabbaba")
 
-	fmt.Println(result)
+	fmt.Println(results)
 }
