@@ -6,7 +6,10 @@ import (
 )
 
 func main() {
-	results := dynamicProgramming.Partition("ababbbabbaba")
+	triangle := [][]int {{2},{3,4},{6,5,7},{4,1,8,3}}
+	//triangle := [][]int {{-10}}
 
-	fmt.Println(results)
+	result := dynamicProgramming.MinimumTotal(triangle)
+
+	fmt.Println(result)
 }
