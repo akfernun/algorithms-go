@@ -1,15 +1,14 @@
 package main
 
 import (
-	"algorithms-go/dynamicProgramming"
+	"algorithms-go/binaryTree"
 	"fmt"
 )
 
 func main() {
-	triangle := [][]int {{2},{3,4},{6,5,7},{4,1,8,3}}
-	//triangle := [][]int {{-10}}
+	tree := binaryTree.TreeNode{Val: 3, Left: &binaryTree.TreeNode{Val: 5}, Right: &binaryTree.TreeNode{Val: 10}}
 
-	result := dynamicProgramming.MinimumTotal(triangle)
+	binaryTree.RecoverTree(&tree)
 
-	fmt.Println(result)
+	fmt.Println(binaryTree.InorderTraversal(&tree))
 }
