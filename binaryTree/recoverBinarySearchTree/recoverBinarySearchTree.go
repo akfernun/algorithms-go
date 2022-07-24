@@ -1,4 +1,6 @@
-package binaryTree
+package recoverBinarySearchTree
+
+import "algorithms-go/binaryTree"
 
 //https://leetcode.com/problems/recover-binary-search-tree/
 // The idea behind this algorithm exploits a couple of facts.
@@ -18,28 +20,28 @@ package binaryTree
 //       actually change the time complexity. So I opted for 2
 //       different loops in favor of readability.
 
-func RecoverTree(root *TreeNode)  {
-	traversal := inorderTraversal(root)
-	var swap1, swap2 *TreeNode
+//func RecoverTree(root *binaryTree.TreeNode)  {
+//	traversal := inorderTraversal(root)
+//	var swap1, swap2 *binaryTree.TreeNode
+//
+//	for left := 0; left < len(traversal) - 1 && swap1 == nil; left++ {
+//		if traversal[left].Val > traversal[left + 1].Val {
+//			swap1 = traversal[left]
+//		}
+//	}
+//
+//	for right := len(traversal) - 1; right > 0 && swap2 == nil; right-- {
+//		if traversal[right].Val < traversal[right - 1].Val {
+//			swap2 = traversal[right]
+//		}
+//	}
+//
+//	swap1.Val, swap2.Val = swap2.Val, swap1.Val
+//}
 
-	for left := 0; left < len(traversal) - 1 && swap1 == nil; left++ {
-		if traversal[left].Val > traversal[left + 1].Val {
-			swap1 = traversal[left]
-		}
-	}
-
-	for right := len(traversal) - 1; right > 0 && swap2 == nil; right-- {
-		if traversal[right].Val < traversal[right - 1].Val {
-			swap2 = traversal[right]
-		}
-	}
-
-	swap1.Val, swap2.Val = swap2.Val, swap1.Val
-}
-
-func inorderTraversal(node *TreeNode) []*TreeNode {
-	var traversal []*TreeNode
-	var stack []*TreeNode
+func inorderTraversal(node *binaryTree.TreeNode) []*binaryTree.TreeNode {
+	var traversal []*binaryTree.TreeNode
+	var stack []*binaryTree.TreeNode
 
 	for currentNode := node; len(stack) > 0 || currentNode != nil; {
 		if currentNode == nil {

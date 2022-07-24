@@ -2,13 +2,17 @@ package main
 
 import (
 	"algorithms-go/binaryTree"
+	"algorithms-go/binaryTree/recoverBinarySearchTree"
 	"fmt"
 )
 
 func main() {
-	tree := binaryTree.TreeNode{Val: 3, Left: &binaryTree.TreeNode{Val: 5}, Right: &binaryTree.TreeNode{Val: 10}}
+	tree := binaryTree.TreeNode{
+		Val: 1,
+		Left: &binaryTree.TreeNode{Val: 3, Right: &binaryTree.TreeNode{Val: 2}},
+	}
 
-	binaryTree.RecoverTree(&tree)
+	recoverBinarySearchTree.RecoverTree(&tree)
 
 	fmt.Println(binaryTree.InorderTraversal(&tree))
 }
