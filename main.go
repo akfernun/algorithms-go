@@ -1,13 +1,11 @@
 package main
 
 import (
-	"algorithms-go/dynamicProgramming/wordBreak"
+	"algorithms-go/stringProblems"
 	"fmt"
 )
 
 func main() {
-	wordDict := []string { "leet", "code" }
-	result := wordBreak.WordBreakBottomUp("leetcode", wordDict)
-
+	result := stringProblems.IsIsomorphic("paper", "title")
 	fmt.Println(result)
 }
