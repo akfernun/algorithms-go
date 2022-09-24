@@ -1,11 +1,13 @@
 package main
 
 import (
-	"algorithms-go/stringProblems"
+	"algorithms-go/linkedList"
 	"fmt"
 )
 
 func main() {
-	result := stringProblems.IsIsomorphic("paper", "title")
+	result := linkedList.MergeTwoLists(list1, list2)
+
 	fmt.Println(result)
 }
+
